@@ -21,14 +21,14 @@ WITH FirstStrokeAdmission AS (
         -- First reason for admission
         AND A.[DiagnosisOrder] = 1
         -- 2025
-        AND B.[AdmissionDate] >= '2025-01-01'
-        AND B.[AdmissionDate] < '2026-01-01'
+        AND B.[AdmissionDate] >= '2024-01-01'
+        AND B.[AdmissionDate] < '2025-01-01'
 		AND B.AgeOnAdmission >= 30
 )
 
 SELECT
     LowerLayerSuperOutputArea AS LSOA_CODE,
-    COUNT(*) AS IHD_Admissions
+    COUNT(*) AS Stroke_Admissions
 FROM FirstStrokeAdmission
 WHERE rn = 1
 GROUP BY

@@ -21,8 +21,8 @@ WITH FirstIHDAdmission AS (
         -- First reason for admission
         AND A.[DiagnosisOrder] = 1
         -- 2025
-        AND B.[AdmissionDate] >= '2025-01-01'
-        AND B.[AdmissionDate] < '2026-01-01'
+        AND B.[AdmissionDate] >= '2024-01-01'
+        AND B.[AdmissionDate] < '2025-01-01'
 		AND B.AgeOnAdmission >= 30
 )
 
